@@ -21,6 +21,9 @@ namespace string
 			// Storage size of the string
 			size_t getSize() const;
 
+			char& operator[](int index);
+			const char& operator[](int index) const;
+
 		private:
 				std::string data;
 	};

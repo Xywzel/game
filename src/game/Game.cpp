@@ -2,6 +2,7 @@
 
 #include "window/Window.h"
 #include "string/String.h"
+#include "input/Input.h"
 
 namespace game
 {
@@ -11,7 +12,7 @@ namespace game
 		for(size_t i = 0; i < args.size(); ++i)
 		{
 			// All proper flags start with char '-' and be two characters long
-			if (args[i][0] != '-' || args[i].size() != 2)
+			if (args[i][0] != '-' || args[i].getLength() != 2)
 				continue;
 			// Continued by letter that tells what should be done
 			switch (args[i][1])

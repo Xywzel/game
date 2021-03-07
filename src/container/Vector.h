@@ -1,3 +1,5 @@
+#pragma once
+
 namespace container
 {
 	template <typename T>

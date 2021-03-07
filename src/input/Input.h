@@ -1,3 +1,5 @@
+#pragma once
+
 // Input handless input from devices, these should be translated to
 #include "macros.h"
 

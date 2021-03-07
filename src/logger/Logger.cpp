@@ -1,7 +1,7 @@
 #include "Logger.h"
 
 #include <iostream>
-#include <string>
+#include "string/String.h"
 
 namespace logger
 {
@@ -9,16 +9,16 @@ namespace logger
 		public:
 			Logger()
 			{
-				minimumSeverity = LogLevel::All;
+				minimumSeverity = Level::All;
 			}
 
-			void queue(LogLevel severity, const string::String& message)
+			void queue(Level severity, const string::String& message)
 			{
 				if (severity >= minimumSeverity)
-					std::cout << message << std::endl;
+					std::cout << message.getData() << std::endl;
 			}
 		private:
-			LogLevel minimumSeverity;
+			Level minimumSeverity;
 	};
 
 	Logger& getLogger()

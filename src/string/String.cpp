@@ -44,6 +44,16 @@ namespace string
 		return data.size();
 	}
 
+	char& String::operator[](int index)
+	{
+		return data[index];
+	}
+
+	const char& String::operator[](int index) const
+	{
+		return data[index];
+	}
+
 	String fromFormatString(const String format, va_list args)
 	{
 		// Calculate the length of the buffer needed
@@ -59,7 +69,6 @@ namespace string
 		assert(fullLength == length && "Print string length doesnt match expected length");
     return String(formatted.get());
 	}
-
 
 	String fromFormatString(const String format...)
 	{
