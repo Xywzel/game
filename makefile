@@ -21,6 +21,8 @@ INCDIR = inc
 # Where external headers are located
 LIBDIR = lib
 # Where external library objectes are located
+RESDIR = res
+# Where the resource files are stored
 BINROOT = bin
 # Root folder for result binary
 OBJROOT = obj
@@ -80,6 +82,16 @@ run: target
 
 # This builds the targets and runs some 
 all: target tests run
+
+# Makes the folder structure for the project
+folder :
+	mkdir -p $(SRCDIR)
+	mkdir -p $(INCDIR)
+	mkdir -p $(LIBDIR)
+	mkdir -p $(RESDIR)
+	mkdir -p $(BINDIR)
+	mkdir -p $(OBJDIR)
+	mkdir -p $(DEPDIR)
 
 # Build target and if suggessful, run tests
 tests: target
